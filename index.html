@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1f3a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <title>Master Planner</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <div class="headerRow">
+      <div class="brandDot" aria-hidden="true"></div><div class="brand">MASTER PLANNER</div>
+      <div class="badge" id="badge">…</div>
+    </div>
+    <div class="h1" id="title" style="margin:8px 0 0">Loading…</div>
+    <div class="sub" id="subtitle" style="margin:4px 0 0"></div>
+  </header>
+
+  <main>
+    <div id="app"></div>
+    <div class="footerSpace"></div>
+  </main>
+
+
+  <nav class="tabbar" aria-label="Primary">
+    <a class="tab" id="tab-home" href="#home" aria-label="Home">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      <span>Home</span>
+    </a>
+    <a class="tab" id="tab-appendix" href="#appendix" aria-label="Appendix">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M7 4h10a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2"/><path d="M7 8h10M7 12h10M7 16h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Appendix</span>
+    </a>
+    <a class="tab" id="tab-schedule" href="#schedule" aria-label="Schedule">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M7 3v3M17 3v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4 7h16v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7Z" stroke="currentColor" stroke-width="2"/><path d="M8 11h4M8 15h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Schedule</span>
+    </a>
+    <a class="tab" id="tab-grocery" href="#grocery" aria-label="Grocery">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M7 7h14l-2 12H8L7 7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M7 7 6 4H3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M9.5 22a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM17.5 22a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" fill="currentColor"/></svg>
+      <span>Grocery</span>
+    </a>
+    <a class="tab" id="tab-more" href="#more" aria-label="More">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 12.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM5 12.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM19 12.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" fill="currentColor"/></svg>
+      <span>More</span>
+    </a>
+  </nav>
+  <div id="videoModal" class="modal hidden" aria-hidden="true">
+    <div class="modalBackdrop" data-close-video></div>
+    <div class="modalCard" role="dialog" aria-modal="true" aria-labelledby="videoTitle">
+      <div class="modalHead">
+        <div class="modalTitle" id="videoTitle">Demo</div>
+        <button class="modalClose" data-close-video aria-label="Close">Close</button>
+      </div>
+      <div class="modalBody">
+        <div class="videoFrame">
+          <iframe id="videoFrame" title="Workout demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <p class="sub" style="margin-top:10px">Tip: If you’re offline, the video won’t load—your workout checklist still works.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
